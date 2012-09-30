@@ -9,7 +9,7 @@ namespace WebShopCMS.Controllers
     public class HomeController : Controller
     {
         //
-        // GET: /Home/
+        // GET: /Home/fefe
 
         public ActionResult Index()
         {
