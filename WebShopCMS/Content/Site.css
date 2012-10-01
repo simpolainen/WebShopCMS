@@ -65,8 +65,9 @@ textarea {
 
 /******Menu*****/
 .menu {
-    background-color: #456456;
+    background-color: #DAE2EC;
     display: block;
+    height:60px;
 }
 
     .menu ol li {
@@ -89,12 +90,12 @@ textarea {
 .left_content {
     float: left;
     width: 200px;
-    /*background-color: #c3cdd9;*/
+    background-color: #EBF0F5
 }
 .VerticalMenu {
     margin: 2.5%;
     width: 95%;
-    background-color: #DAE2EC
+    background-color: #EBF0F5
 }
     .VerticalMenu ul {
         font-size: 0;
