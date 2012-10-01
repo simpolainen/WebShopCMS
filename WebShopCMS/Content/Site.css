@@ -10,9 +10,7 @@ header, footer, nav, section {
 }
 
 .ClearLeft {
-
-clear:left;
-
+    clear: left;
 }
 
 /* Styles for basic forms
@@ -67,42 +65,48 @@ textarea {
 
 /******Menu*****/
 .menu {
-background-color:#456456;
-display:block;
+    background-color: #456456;
+    display: block;
 }
-.menu ol li {
-           list-style:none;
-           float:left;
-           padding-right:10px;
-    }
-.menu ol li a {
-    text-decoration:none;
-    }
-/*vertical menu*/
-.VerticalMenu {
-    width:95%;
-    background-color:#c3cdc9;
 
-}
+    .menu ol li {
+        list-style: none;
+        float: left;
+        padding-right: 10px;
+    }
+
+        .menu ol li a {
+            text-decoration: none;
+        }
+/*vertical menu*/
+
 
 /*content*/
 .content-wrapper {
-
-width:960px;
+    width: 960px;
 }
 
 .left_content {
-float:left;
-width:200px;
-background-color:#DAE2EC;
+    float: left;
+    width: 200px;
+    /*background-color: #c3cdd9;*/
 }
-
-.left_content ol li {
-
-list-style:none;
+.VerticalMenu {
+    margin: 2.5%;
+    width: 95%;
+    background-color: #DAE2EC
 }
+    .VerticalMenu ul {
+        font-size: 0;
+    }
+
+        .VerticalMenu ul li {
+            list-style: none;
+            font-size: 12px;
+        }
 
 .right-content {
-    float:left;
-    width:500px;
+    padding-left:10px;
+    float: left;
+    width: 500px;
 }
