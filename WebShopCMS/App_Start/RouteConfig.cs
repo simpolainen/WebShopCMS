@@ -18,6 +18,12 @@ namespace WebShopCMS
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Product", action = "Index", id = UrlParameter.Optional }
             );
+
+            routes.MapRoute(
+                name: "Order",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Order", action = "Index", id = UrlParameter.Optional }
+            );
         }
     }
 }

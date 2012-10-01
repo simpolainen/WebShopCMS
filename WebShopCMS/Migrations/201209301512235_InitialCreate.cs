@@ -32,19 +32,20 @@ namespace WebShopCMS.Migrations
             //  })
             //  .PrimaryKey(t => t.OrderId);
 
+            //AddForeignKey("Product_Order", "OrderId", "Orders");
+            //AddForeignKey("Product_Order", "ProductKey", "Products");
 
-            CreateTable(
-                "dbo.Order_ProductMapping",
-                c => new
-                {
-                    OrderId = c.Guid(nullable: false),
-                    ProductId = c.Guid(nullable: false)
+            //CreateTable(
+            //    "Order_Product",
+            //    c => new
+            //    {
+            //        OrderId = c.Guid(nullable: false),
+            //        ProductId = c.Guid(nullable: false)
 
-                })
-                .PrimaryKey(t => t.OrderId)
-                .PrimaryKey(s => s.ProductId);
-                //.ForeignKey("Orders", s => s.OrderId)
-                //.ForeignKey("Products", s => s.ProductId);
+            //    })
+            //    .PrimaryKey(t => t.OrderId);
+                
+                
 
           
 

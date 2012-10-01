@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.Data.Linq;
+using System.Data.Mapping;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -18,6 +20,23 @@ namespace WebShopCMS.Controllers
 
         public ActionResult Index()
         {
+            List<Product> ps = new List<Product>();
+
+            //var o = new Order()
+            //{
+            //    OrderId = Guid.NewGuid(),
+            //    Comment = "fdsf",
+            //    Products = db.Products.ToList()
+
+            //};
+            
+            //db.Orders.Add(o);
+            //db.SaveChanges();
+
+            var p = db.Orders.ToList();
+            var a = db.Orders.Include(s => s.Products).ToList();
+           
+
             return View(db.Products.ToList());
         }
 
