@@ -9,12 +9,16 @@
 </head>
 <body>
     <header>
-        <ol>
-            <li>@Html.ActionLink("Order","","Order")</li>
-            <li></li>
-            <li></li>
-        </ol>
+        <div class="menu">
+            <ol>
+                @*text/view/control*@
+                <li>@Html.ActionLink("Order", "", "Order")</li>
+                <li>@Html.ActionLink("Product", "", "Product")</li>
+                <li>@Html.ActionLink("Order", "", "Order")</li>
+            </ol>
+        </div>
     </header>
+    <br class="ClearLeft"/>
     @RenderBody()
 
     @Scripts.Render("~/bundles/jquery")

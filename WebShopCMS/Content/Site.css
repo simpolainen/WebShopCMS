@@ -9,6 +9,11 @@ header, footer, nav, section {
     display: block;
 }
 
+.ClearLeft {
+
+clear:left;
+
+}
 
 /* Styles for basic forms
 -----------------------------------------------------------*/
@@ -59,3 +64,17 @@ textarea {
 .validation-summary-valid {
     display: none;
 }
+
+/******Menu*****/
+.menu {
+background-color:#456456;
+display:block;
+}
+.menu ol li {
+           list-style:none;
+           float:left;
+           padding-right:10px;
+    }
+.menu ol li a {
+    text-decoration:none;
+    }
