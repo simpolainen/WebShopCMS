@@ -78,3 +78,31 @@ display:block;
 .menu ol li a {
     text-decoration:none;
     }
+/*vertical menu*/
+.VerticalMenu {
+    width:95%;
+    background-color:#c3cdc9;
+
+}
+
+/*content*/
+.content-wrapper {
+
+width:960px;
+}
+
+.left_content {
+float:left;
+width:200px;
+background-color:#DAE2EC;
+}
+
+.left_content ol li {
+
+list-style:none;
+}
+
+.right-content {
+    float:left;
+    width:500px;
+}

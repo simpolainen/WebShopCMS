@@ -3,37 +3,49 @@
 @{
     ViewBag.Title = "Index";
 }
+<div class="content-wrapper">
+    <div class="left_content">
+        <div class="VerticalMenu">
+            <ol aria-dropeffect="move">
+                <li>@Html.ActionLink("Skapa produkt", "Create")</li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
 
-<h2>Index</h2>
+            </ol>
+        </div>
+    </div>
+    <div class="right-content">
+        <h3>Produkter</h3>
+        <table>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Description)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th></th>
+            </tr>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table>
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Description)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
-        </th>
-        <th></th>
-    </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.ProductKey }) |
+            @Html.ActionLink("Details", "Details", new { id = item.ProductKey }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.ProductKey })
+                    </td>
+                </tr>
+            }
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Description)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ProductKey }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ProductKey }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ProductKey })
-        </td>
-    </tr>
-}
-
-</table>
+        </table>
+    </div>
+</div>
