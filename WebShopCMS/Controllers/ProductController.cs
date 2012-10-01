@@ -38,6 +38,7 @@ namespace WebShopCMS.Controllers
            
 
             return View(db.Products.ToList());
+
         }
 
         //

@@ -9,6 +9,9 @@ header, footer, nav, section {
     display: block;
 }
 
+.ClearLeft {
+    clear: left;
+}
 
 /* Styles for basic forms
 -----------------------------------------------------------*/
@@ -58,4 +61,53 @@ textarea {
 
 .validation-summary-valid {
     display: none;
+}
+
+/******Menu*****/
+.menu {
+    background-color: #DAE2EC;
+    display: block;
+    height:60px;
+}
+
+    .menu ol li {
+        list-style: none;
+        float: left;
+        padding-right: 10px;
+    }
+
+        .menu ol li a {
+            text-decoration: none;
+        }
+/*vertical menu*/
+
+
+/*content*/
+.content-wrapper {
+    width: 960px;
+}
+
+.left_content {
+    float: left;
+    width: 200px;
+    background-color: #EBF0F5
+}
+.VerticalMenu {
+    margin: 2.5%;
+    width: 95%;
+    background-color: #EBF0F5
+}
+    .VerticalMenu ul {
+        font-size: 0;
+    }
+
+        .VerticalMenu ul li {
+            list-style: none;
+            font-size: 12px;
+        }
+
+.right-content {
+    padding-left:10px;
+    float: left;
+    width: 500px;
 }
