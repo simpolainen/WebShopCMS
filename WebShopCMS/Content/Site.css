@@ -111,3 +111,8 @@ textarea {
     float: left;
     width: 500px;
 }
+.toggle {
+   font-weight:bold;
+   cursor:pointer;
+
+}
