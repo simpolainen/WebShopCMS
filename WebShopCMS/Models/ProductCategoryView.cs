@@ -10,4 +10,10 @@ namespace WebShopCMS.Models
         public Product Product { get; set; }
         public Categories Category { get; set; }
     }
+
+    public class CategortSubCategoryView
+    {
+        public Categories Product { get; set; }
+        public Categories Category { get; set; }
+    }
 }
