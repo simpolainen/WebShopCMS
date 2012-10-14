@@ -37,7 +37,7 @@ namespace WebShopCMS.Models
         [Display(Name = "Garanti")]
         public int Factory_Warranty { get; set; }
 
-        public List<Order> Orders { get; set; }
+        public List<Order> Orders { get; set; } 
 
     }
 }
