@@ -1,4 +1,5 @@
-﻿@model WebShopCMS.Models.Product
+﻿@model WebShopCMS.Models.ProductCategoryView
+
 
 @{
     ViewBag.Title = "Create";
@@ -14,64 +15,64 @@
         <legend>Skapa Produkt</legend>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.Article_Number)
+            @Html.LabelFor(model => model.Product.Article_Number)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.Article_Number)
-            @Html.ValidationMessageFor(model => model.Article_Number)
+            @Html.EditorFor(model => model.Product.Article_Number)
+            @Html.ValidationMessageFor(model => model.Product.Article_Number)
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.Product_Information)
+            @Html.LabelFor(model => model.Product.Product_Information)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.Product_Information)
-            @Html.ValidationMessageFor(model => model.Product_Information)
+            @Html.EditorFor(model => model.Product.Product_Information)
+            @Html.ValidationMessageFor(model => model.Product.Product_Information)
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.Product_Name)
+            @Html.LabelFor(model => model.Product.Product_Name)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.Product_Name)
-            @Html.ValidationMessageFor(model => model.Product_Name)
+            @Html.EditorFor(model => model.Product.Product_Name)
+            @Html.ValidationMessageFor(model => model.Product.Product_Name)
         </div>
         <div class="editor-label">
-            @Html.LabelFor(model => model.Product_Price)
+            @Html.LabelFor(model => model.Product.Product_Price)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.Product_Price)
-            @Html.ValidationMessageFor(model => model.Product_Price)
+            @Html.EditorFor(model => model.Product.Product_Price)
+            @Html.ValidationMessageFor(model => model.Product.Product_Price)
         </div>
         <div class="editor-label">
-            @Html.LabelFor(model => model.Product_Rating)
+            @Html.LabelFor(model => model.Product.Product_Rating)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.Product_Rating)
-            @Html.ValidationMessageFor(model => model.Product_Rating)
+            @Html.EditorFor(model => model.Product.Product_Rating)
+            @Html.ValidationMessageFor(model => model.Product.Product_Rating)
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.Product_Category)
+         @Html.DropDownListFor(s => s.Product.Product_Category, (IEnumerable<SelectListItem>) ViewBag.Categories);
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.Product_Category)
-            @Html.ValidationMessageFor(model => model.Product_Category)
+           
+            @Html.ValidationMessageFor(model => model.Product.Product_Category)
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.Ammount_In_Stock)
+            @Html.LabelFor(model => model.Product.Ammount_In_Stock)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.Ammount_In_Stock)
-            @Html.ValidationMessageFor(model => model.Ammount_In_Stock)
+            @Html.EditorFor(model => model.Product.Ammount_In_Stock)
+            @Html.ValidationMessageFor(model => model.Product.Ammount_In_Stock)
         </div>
                 <div class="editor-label">
-            @Html.LabelFor(model => model.In_Stock)
+            @Html.LabelFor(model => model.Product.In_Stock)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.In_Stock)
-            @Html.ValidationMessageFor(model => model.In_Stock)
+            @Html.EditorFor(model => model.Product.In_Stock)
+            @Html.ValidationMessageFor(model => model.Product.In_Stock)
         </div>
         <p>
             <input type="submit" value="Create" />

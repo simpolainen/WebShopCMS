@@ -16,12 +16,13 @@ namespace WebShopCMS.Controllers
     {
         private WebShopDbContext db = new WebShopDbContext();
         private DataAccess<Product> dataAccess = new DataAccess<Product>();
+        private DataAccess<Categories> dataAccessCat = new DataAccess<Categories>();
 
         // GET: /Product/
 
         public ActionResult Index()
         {
-           
+
             //var o = new Order()
             //{
             //    OrderId = Guid.NewGuid(),
@@ -39,7 +40,7 @@ namespace WebShopCMS.Controllers
                 .Create("Product_Price > 1000")
                 .Or("Product_Name == Steelseries G795");
             dataAccess.Include = "Orders";
-                
+
             var products = dataAccess.Go();
 
             dataAccess.FilterObject
@@ -48,7 +49,7 @@ namespace WebShopCMS.Controllers
 
             var products2 = dataAccess.Go();
 
-            return View(db.Products.ToList());
+            return View(products2);
         }
 
         //
@@ -69,6 +70,14 @@ namespace WebShopCMS.Controllers
 
         public ActionResult Create()
         {
+            IEnumerable<SelectListItem> items = dataAccessCat.GetAll()
+            .Select(c => new SelectListItem
+             {
+                 
+                 Value = c.CategoryID.ToString(),
+                 Text = c.Category_Name
+            });
+            ViewBag.Categories = items;
             return View();
         }
 
