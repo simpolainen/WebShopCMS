@@ -19,7 +19,7 @@ namespace WebShopCMS.Models
         [Display(Name = "Kommentar")]
         public string Product_Comment { get; set; }
         [Display(Name = "Kategori")]
-        public string Product_Category { get; set; }
+        public int Product_Category { get; set; }
         [Display(Name = "Information")]
         public string Product_Information { get; set; }
         [Display(Name = "Betyg")]
@@ -36,6 +36,7 @@ namespace WebShopCMS.Models
         public int Ammount_In_Stock { get; set; }
         [Display(Name = "Garanti")]
         public int Factory_Warranty { get; set; }
+        public List<Order> Orders { get; set; }
 
         public List<Order> Orders { get; set; } 
 
