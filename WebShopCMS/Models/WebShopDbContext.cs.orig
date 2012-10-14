@@ -1,0 +1,33 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data.Entity;
+using System.Linq;
+using System.Web;
+
+namespace WebShopCMS.Models
+{
+    public class WebShopDbContext : DbContext
+    {
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Order> Orders { get; set; }
+<<<<<<< HEAD
+      
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Order>().
+              HasMany(p => p.Products).
+              WithMany(o => o.Orders).
+              Map(
+               m =>
+               {
+                   m.MapLeftKey("Order_OrderId");
+                   m.MapRightKey("Product_ProductKey");
+                   m.ToTable("OrderProducts");
+               });
+        }
+=======
+        public DbSet<Categories> Categories { get; set; }
+>>>>>>> 2207b2d4df239f0cce7fd18f89456e2ea427f15c
+    }
+}
