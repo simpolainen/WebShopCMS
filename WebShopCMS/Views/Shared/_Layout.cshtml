@@ -26,11 +26,14 @@
             </ol>
         </div>
     </header>
-    <br class="ClearLeft"/>
-    @RenderBody()
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/menuToggle")
+    <br class="ClearLeft" />
+        <div class="right-content">
+            @RenderBody()
+            @Scripts.Render("~/bundles/jquery")
+            @Scripts.Render("~/bundles/menuToggle")
 
-    @RenderSection("scripts", required: false)
+            @RenderSection("scripts", required: false)
+        </div>
+
 </body>
 </html>

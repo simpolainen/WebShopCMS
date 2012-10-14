@@ -7,23 +7,109 @@
 <h2>Details</h2>
 
 <fieldset>
-    <legend>Product</legend>
+    <legend>@Html.DisplayFor(model => model.Product_Name)</legend>
+    <table>
+                <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.Article_Number):
+                </div>
+            </td>
+            <td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.Article_Number)
+                </div>
+            </td>
+        </tr>
+                <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.Product_Name):
+                </div>
+            </td>
+            <td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.Product_Name)
+                </div>
+            </td>
+        </tr>
+                <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.Product_Price):
+                </div>
+            </td>
+            <td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.Product_Price)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.Product_Rating):
+                </div>
+            </td>
+            <td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.Product_Rating)
+                </div>
+            </td>
 
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.Description)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Description)
-    </div>
+        </tr>
 
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.Name)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Name)
-    </div>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.Product_Category):
+                </div>
+            </td>
+            <td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.Product_Category)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.In_Stock):
+                </div>
+            </td>
+            <td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.In_Stock)
+                </div>
+            </td>
+        </tr>
+                <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.Ammount_In_Stock):
+                </div>
+            </td>
+            <td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.Ammount_In_Stock)
+                </div>
+            </td>
+        </tr>
+                        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.Product_Comment):
+                </div>
+            </td>
+            <td>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.Product_Comment)
+                </div>
+            </td>
+        </tr>
+    </table>
 </fieldset>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id=Model.ProductKey }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ProductKey }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

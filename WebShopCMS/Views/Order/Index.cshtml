@@ -2,4 +2,34 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<div class="content-wrapper">
+    <div class="left_content">
+        <div class="VerticalMenu">
+            <ul class="nav">
+                <li class="toggle">Hantera Ordrar</li>
+                <li class="content">
+                    <ul>
+                        <li class="toggle">@Html.ActionLink("Alla ordrar", "","Order")</li>
+                        <li>Godkända ordrar</li>
+                        <li>Avbrutna ordrar</li>
+                        <li>Skickade ordrar</li>
+
+                    </ul>
+                </li>
+                <li class="toggle">Item</li>
+                    <li class="content">
+                        <ul>
+                            <li>Test</li>
+                            <li>Test</li>
+                            <li>Test</li>
+                        </ul>
+                    </li>
+                <li>Item</li>
+
+            </ul>
+        </div>
+    </div>
+        <div class="right-content">
+        <h3>Order hantering</h3>
+    </div>
+    </div>
