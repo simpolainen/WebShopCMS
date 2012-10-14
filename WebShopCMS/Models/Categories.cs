@@ -10,6 +10,7 @@ namespace WebShopCMS.Models
     {
         [Key]
         public int CategoryID { get; set; }
+        [Display(Name ="Kategori")]
         public string Category_Name { get; set; }
     }
 }

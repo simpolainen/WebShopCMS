@@ -16,7 +16,11 @@ namespace WebShopCMS.Controllers
     {
         private WebShopDbContext db = new WebShopDbContext();
         private DataAccess<Product> dataAccess = new DataAccess<Product>();
+<<<<<<< HEAD
+        private DataAccess<Categories> dataAccessCategory = new DataAccess<Categories>();
+=======
         private DataAccess<Categories> dataAccessCat = new DataAccess<Categories>();
+>>>>>>> e1fd8c14651ac2b9f2eb919cd52d151ad36f036b
 
         // GET: /Product/
 
@@ -36,7 +40,7 @@ namespace WebShopCMS.Controllers
 
             //var p = db.Orders.ToList();
             //var a = db.Orders.Include(s => s.Products).ToList();
-
+            
             dataAccess.FilterObject
                 .Create("Product_Price > 1000")
                 .Or("Product_Name == Steelseries G795");
@@ -48,7 +52,7 @@ namespace WebShopCMS.Controllers
                 .Create("Product_Price > 200")
                 .Or("Product_Name == Steelseries G795");
 
-            var products2 = dataAccess.GetAll();
+            var products2 = dataAccess.Go();
 
             return View(products2);
         }
@@ -71,14 +75,18 @@ namespace WebShopCMS.Controllers
 
         public ActionResult Create()
         {
+<<<<<<< HEAD
+            
+=======
             IEnumerable<SelectListItem> items = dataAccessCat.GetAll()
             .Select(c => new SelectListItem
              {
-
+                 
                  Value = c.CategoryID.ToString(),
                  Text = c.Category_Name
-             });
+            });
             ViewBag.Categories = items;
+>>>>>>> e1fd8c14651ac2b9f2eb919cd52d151ad36f036b
             return View();
         }
 
@@ -104,8 +112,6 @@ namespace WebShopCMS.Controllers
 
         public ActionResult Edit(Guid id)
         {
-
-
             Product product = db.Products.Find(id);
             if (product == null)
             {
@@ -120,7 +126,6 @@ namespace WebShopCMS.Controllers
         [HttpPost]
         public ActionResult Edit(Product product)
         {
-
             if (ModelState.IsValid)
             {
                 db.Entry(product).State = EntityState.Modified;

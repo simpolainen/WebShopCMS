@@ -1,0 +1,46 @@
+﻿@model IEnumerable<WebShopCMS.Models.Categories>
+
+@{
+    ViewBag.Title = "Index";
+
+}
+@{    var grid = new WebGrid(Model, canPage:true, rowsPerPage:3, canSort:true);
+      grid.Pager(WebGridPagerModes.NextPrevious,  previousText: "Föregående", nextText: "Nästa"); 
+
+      }
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+@grid.GetHtml( tableStyle: "table",
+alternatingRowStyle: "alternate",
+headerStyle:"header",
+columns: grid.Columns(grid.Column(columnName:"Category_Name", header: "Kategori"),grid.Column(columnName:"CategoryID", header: "Kategori"))
+)
+
+
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Category_Name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Category_Name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CategoryID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CategoryID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CategoryID })
+        </td>
+    </tr>
+}
+
+</table>
