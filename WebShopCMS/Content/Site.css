@@ -13,6 +13,10 @@ header, footer, nav, section {
     clear: left;
 }
 
+
+.display-label {
+    font-weight:500;
+}
 /* Styles for basic forms
 -----------------------------------------------------------*/
 fieldset {
@@ -109,7 +113,7 @@ textarea {
 .right-content {
     padding-left:10px;
     float: left;
-    width: 500px;
+    width: 700px;
 }
 .toggle {
    font-weight:bold;

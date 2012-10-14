@@ -10,5 +10,6 @@ namespace WebShopCMS.Models
     {
         public DbSet<Product> Products { get; set; }
         public DbSet<Order> Orders { get; set; }
+        public DbSet<Categories> Categories { get; set; }
     }
 }

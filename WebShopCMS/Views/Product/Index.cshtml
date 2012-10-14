@@ -32,24 +32,45 @@
         <h3>Produkter</h3>
         <table>
             <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.Description)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Name)
-                </th>
-                <th></th>
-            </tr>
+                <td> Artikelnummer</td>
+                <td> Produkt Namn</td>
+                <td> Pris</td>
+                <td> Betyg</td>
+                <td> Kategori</td>
+                <td> Antal i lager</td>
+                <td>I lager</td>
+                <td> Information</td>
 
+
+            </tr>
             @foreach (var item in Model)
             {
                 <tr>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Description)
+                        @Html.DisplayFor(modelItem => item.Article_Number)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Name)
+                        @Html.DisplayFor(modelItem => item.Product_Name)
                     </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Product_Price)
+                    </td>
+                                        <td>
+                        @Html.DisplayFor(modelItem => item.Product_Rating)
+                    </td>
+                                        <td>
+                        @Html.DisplayFor(modelItem => item.Product_Category)
+                    </td>
+                                        <td>
+                        @Html.DisplayFor(modelItem => item.Ammount_In_Stock)
+                    </td>
+                                        <td>
+                        @Html.DisplayFor(modelItem => item.In_Stock)
+                    </td>
+                                                            <td>
+                        @Html.DisplayFor(modelItem => item.Product_Information)
+                    </td>
+
                     <td>
                         @Html.ActionLink("Edit", "Edit", new { id = item.ProductKey }) |
             @Html.ActionLink("Details", "Details", new { id = item.ProductKey }) |
