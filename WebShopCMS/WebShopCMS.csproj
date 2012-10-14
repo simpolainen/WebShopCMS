@@ -125,9 +125,12 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="DataAccess\DataAccess.cs" />
+    <Compile Include="DataAccess\Dynamic.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Interface\IDataAccess.cs" />
     <Compile Include="Migrations\201209301512235_InitialCreate.cs" />
     <Compile Include="Migrations\201209301512235_InitialCreate.Designer.cs">
       <DependentUpon>201209301512235_InitialCreate.cs</DependentUpon>

@@ -8,37 +8,47 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using WebShopCMS.Models;
+using WebShopCMS.DataAccess;
 
 namespace WebShopCMS.Controllers
 {
     public class ProductController : Controller
     {
         private WebShopDbContext db = new WebShopDbContext();
+        private DataAccess<Product> dataAccess = new DataAccess<Product>();
 
-        //
         // GET: /Product/
 
         public ActionResult Index()
         {
-            List<Product> ps = new List<Product>();
-
+           
             //var o = new Order()
             //{
             //    OrderId = Guid.NewGuid(),
             //    Comment = "fdsf",
             //    Products = db.Products.ToList()
-
             //};
-            
+            //dataAccess.Add(new Product(){ ProductKey = Guid.NewGuid(), Name = "Test" });
+            //dataAccess.GetById(Guid.Parse("32071315-217D-47A3-846A-EF50ABC4B9E7"));
             //db.Orders.Add(o);
             //db.SaveChanges();
 
-            var p = db.Orders.ToList();
-            var a = db.Orders.Include(s => s.Products).ToList();
-           
+            //var p = db.Orders.ToList();
+            //var a = db.Orders.Include(s => s.Products).ToList();
+            dataAccess.FilterObject
+                .Create("Product_Price > 1000")
+                .Or("Product_Name == Steelseries G795");
+            dataAccess.Include = "Orders";
+                
+            var products = dataAccess.Go();
+
+            dataAccess.FilterObject
+                .Create("Product_Price > 200")
+                .Or("Product_Name == Steelseries G795");
+
+            var products2 = dataAccess.Go();
 
             return View(db.Products.ToList());
-
         }
 
         //
