@@ -16,6 +16,7 @@ namespace WebShopCMS.Controllers
     {
         private WebShopDbContext db = new WebShopDbContext();
         private DataAccess<Product> dataAccess = new DataAccess<Product>();
+        private DataAccess<Categories> dataAccessCategory = new DataAccess<Categories>();
 
         // GET: /Product/
 
@@ -35,6 +36,7 @@ namespace WebShopCMS.Controllers
 
             //var p = db.Orders.ToList();
             //var a = db.Orders.Include(s => s.Products).ToList();
+            
             dataAccess.FilterObject
                 .Create("Product_Price > 1000")
                 .Or("Product_Name == Steelseries G795");
@@ -69,6 +71,7 @@ namespace WebShopCMS.Controllers
 
         public ActionResult Create()
         {
+            
             return View();
         }
 
